@@ -2,10 +2,10 @@ import React from 'react'
 
 function Capa() {
   return (
-    <div>
+    <main className='bodyCape'>
       <h1>Houses and Cars</h1>
       <h3>Familia Goodwin</h3>
-    </div>
+    </main>
   )
 }
 
