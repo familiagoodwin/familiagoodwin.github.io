@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import './pages/css/pages.css'
 import Capa from './pages/Capa';
