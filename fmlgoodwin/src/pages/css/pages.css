@@ -3,19 +3,32 @@
   flex-direction: column;
   align-items: center;
   justify-items: center;
+  justify-content: center;
   border: 1px solid black;
-  /* height: 100vh; */
 }
 
 .fullBody {
   height: 100vh;
 }
 
-.animationUP {
-  animation: animate 3s linear;
+.noBody {
+  display: none;
 }
 
-@keyframes animate {
+.animationUP {
+  animation: animateMain 1s linear;
+  height: 30vh;
+}
+
+.animateSec {
+  /* animation: animateSec 3s linear; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+@keyframes animateMain {
   0% {
       /* transform: translateX(100px); */
       height: 100vh;
@@ -25,3 +38,14 @@
       height: 30vh;
   }
 }
+
+/* @keyframes animateSec { */
+  /* 0% { */
+      /* transform: translateX(100px); */
+      /* height: 0vh; */
+  /* } */
+  /* 100% { */
+      /* transform: translateX(0); */
+      /* height: 70vh; */
+  /* } */
+/* } */

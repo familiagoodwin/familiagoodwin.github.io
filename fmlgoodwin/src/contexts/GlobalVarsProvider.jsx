@@ -3,7 +3,7 @@ import { useState } from 'react'
 import GlobalVarsContext from './context/GlobalVars'
 
 function GlobalVarsProvider({children}) {
-  const [classCss, setClassCss] =useState({mainCape: 'bodyCape'});
+  const [classCss, setClassCss] =useState({mainCape: 'noBody'});
 
   const objProvider = {
     classCss,
