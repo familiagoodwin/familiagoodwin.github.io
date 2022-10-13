@@ -5,6 +5,7 @@
   justify-items: center;
   justify-content: center;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .fullBody {
@@ -17,7 +18,8 @@
 
 .animationUP {
   animation: animateMain 1s linear;
-  height: 30vh;
+  height: 20vh;
+  cursor: default;
 }
 
 .animateSec {
@@ -35,7 +37,7 @@
   }
   100% {
       /* transform: translateX(0); */
-      height: 30vh;
+      height: 20vh;
   }
 }
 

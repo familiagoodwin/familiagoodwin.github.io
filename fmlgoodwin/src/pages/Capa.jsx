@@ -16,11 +16,12 @@ function Capa() {
   }
 
   return (
-    <main className={'bodyCape fullBody'}>
-      <h1
-       role='presentation'
-       onClick={ hanldeClinkTitle }
-      >Houses and Cars</h1>
+    <main
+      className={'bodyCape fullBody'}
+      role='presentation'
+      onClick={ hanldeClinkTitle }
+    >
+      <h1>Houses and Cars</h1>
       <h3>Familia Goodwin</h3>
     </main>
   )
