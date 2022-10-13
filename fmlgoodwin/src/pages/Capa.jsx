@@ -1,18 +1,22 @@
 import React from 'react'
-import { useContext } from 'react'
-import GlobalVarsContext from '../contexts/context/GlobalVars'
+// import { useContext } from 'react'
+// import GlobalVarsContext from '../contexts/context/GlobalVars'
 
 function Capa() {
-  const { classCss, setClassCss } = useContext(GlobalVarsContext);
+  // const { classCss, setClassCss } = useContext(GlobalVarsContext);
 
-  console.log(classCss);
+  // console.log(classCss);
 
   function hanldeClinkTitle() {
-    setClassCss((prev) => ({...prev, mainCape: 'animationUP'}));
+    const animated = document.querySelector('.bodyCape');
+
+    // setClassCss((prev) => ({...prev, mainCape: 'bodyCape animationUP'}));
+    animated.classList.remove('fullBody');
+    animated.classList.add('animationUP');
   }
 
   return (
-    <main className={classCss}>
+    <main className={'bodyCape fullBody'}>
       <h1
        role='presentation'
        onClick={ hanldeClinkTitle }

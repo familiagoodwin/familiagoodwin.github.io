@@ -1,9 +1,9 @@
 import React from 'react'
-import { useContext } from 'react'
-import GlobalVarsContext from '../contexts/context/GlobalVars'
+// import { useContext } from 'react'
+// import GlobalVarsContext from '../contexts/context/GlobalVars'
 
 function MainMenu() {
-  const { setClasCss } = useContext(GlobalVarsContext);
+  // const { setClasCss } = useContext(GlobalVarsContext);
 
   return (
     <div>

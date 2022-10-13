@@ -4,6 +4,11 @@
   align-items: center;
   justify-items: center;
   border: 1px solid black;
+  /* height: 100vh; */
+}
+
+.fullBody {
+  height: 100vh;
 }
 
 .animationUP {
@@ -12,9 +17,11 @@
 
 @keyframes animate {
   0% {
-      transform: translateX(100px);
+      /* transform: translateX(100px); */
+      height: 100vh;
   }
   100% {
-      transform: translateX(0);
+      /* transform: translateX(0); */
+      height: 30vh;
   }
 }
