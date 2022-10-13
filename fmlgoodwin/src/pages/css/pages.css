@@ -23,7 +23,6 @@
 }
 
 .animateSec {
-  /* animation: animateSec 3s linear; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,22 +31,9 @@
 
 @keyframes animateMain {
   0% {
-      /* transform: translateX(100px); */
       height: 100vh;
   }
   100% {
-      /* transform: translateX(0); */
       height: 20vh;
   }
 }
-
-/* @keyframes animateSec { */
-  /* 0% { */
-      /* transform: translateX(100px); */
-      /* height: 0vh; */
-  /* } */
-  /* 100% { */
-      /* transform: translateX(0); */
-      /* height: 70vh; */
-  /* } */
-/* } */
