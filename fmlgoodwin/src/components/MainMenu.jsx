@@ -12,18 +12,18 @@ function MainMenu() {
     setClassCss((prev) => ({...prev, mainCape: 'noBody animateSec'}));
   }
 
-  function handleClick({ target }) {
-    console.log(target.id);
+  function handleClick({ id }) {
+    console.log(id);
     newSubMenu();
-    setOptionsMenu((prev) => ({ ...prev, [target.id]: true}));
-    setClassCss((prev) => ({...prev, mainCape: `noBody animateSec ${target.id}`}));
+    setOptionsMenu((prev) => ({ ...prev, [id]: true}));
+    setClassCss((prev) => ({...prev, mainCape: `noBody ${id}`}));
   }
 
   return (
     <nav className={ classCss.mainCape }>
       <ul
         role='presentation'
-        onClick={ handleClick }
+        onClick={ ({ target }) => handleClick(target) }
       >
         <li id='opAlbum'>Albuns</li>
         <li>Time Line</li>

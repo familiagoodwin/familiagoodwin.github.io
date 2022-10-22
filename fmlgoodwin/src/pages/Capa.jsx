@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import GlobalVarsContext from '../contexts/context/GlobalVars'
 
 function Capa() {
-  const { setClassCss } = useContext(GlobalVarsContext);
+  const { setClassCss, setOptionsMenu } = useContext(GlobalVarsContext);
 
   // console.log(classCss);
 
@@ -11,6 +11,7 @@ function Capa() {
     const animated = document.querySelector('.bodyCape');
 
     setClassCss((prev) => ({...prev, mainCape: 'noBody animateSec'}));
+    setOptionsMenu({ opAlbum: false });
     animated.classList.remove('fullBody');
     animated.classList.add('animationUP');
   }
