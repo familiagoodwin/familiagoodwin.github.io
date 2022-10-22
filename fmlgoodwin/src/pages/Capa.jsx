@@ -7,7 +7,7 @@ function Capa() {
 
   // console.log(classCss);
 
-  function hanldeClinkTitle() {
+  function handleClickTitle() {
     const animated = document.querySelector('.bodyCape');
 
     setClassCss((prev) => ({...prev, mainCape: 'noBody animateSec'}));
@@ -19,7 +19,7 @@ function Capa() {
     <main
       className={'bodyCape fullBody'}
       role='presentation'
-      onClick={ hanldeClinkTitle }
+      onClick={ handleClickTitle }
     >
       <h1 className='mainTitle'>Houses and Cars</h1>
       <h3 className='mainSubTitle'>Familia Goodwin</h3>
