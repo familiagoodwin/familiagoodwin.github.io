@@ -13,6 +13,11 @@
   src: url('/src/fonts/Playball-q6o1.ttf');
 }
 
+@font-face {
+  font-family: 'Wester';
+  src: url('/src/fonts/Quentincaps-owxKz.ttf');
+}
+
 .App {
   background-color: black;
   color: gold;

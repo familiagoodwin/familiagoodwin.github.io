@@ -15,7 +15,7 @@
 .animationUP {
   animation: animateMain 0.7s linear;
   height: 20vh;
-  cursor: default;
+  /* cursor: default; */
 }
 
 .animateSec {

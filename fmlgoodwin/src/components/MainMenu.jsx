@@ -16,6 +16,7 @@ function MainMenu() {
     <nav className={ classCss.mainCape }>
       <ul
         role='presentation'
+        className='menu'
         onClick={ ({ target }) => handleClick(target) }
       >
         <li id='opAlbum'>Albuns</li>
