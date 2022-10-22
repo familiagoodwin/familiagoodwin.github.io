@@ -1,0 +1,25 @@
+.noBody {
+  display: none;
+  height: 50vh;
+}
+
+.menuAlbunsTrue {
+  height: 80vh;
+}
+
+.menuAlbuns {
+  animation: animateOpenMenuAlbuns 0.5s linear;
+  margin: 20px;
+  border: 3px double gold;
+  width: 90vw;
+  height: 50vh;
+}
+
+@keyframes animateOpenMenuAlbuns {
+  0% {
+      height: 18vh;
+  }
+  100% {
+      height: 50vh;
+  }
+}

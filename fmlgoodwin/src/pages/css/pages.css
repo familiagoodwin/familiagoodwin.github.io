@@ -12,10 +12,6 @@
   height: 100vh;
 }
 
-.noBody {
-  display: none;
-}
-
 .animationUP {
   animation: animateMain 0.7s linear;
   height: 20vh;
@@ -23,10 +19,10 @@
 }
 
 .animateSec {
-  display: flex;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 50vh;
 }
 
 @keyframes animateMain {

@@ -1,5 +1,6 @@
 import 'bulma/css/bulma.min.css'
 import './App.css';
+import './components/css/components.css'
 import './pages/css/pages.css'
 import Capa from './pages/Capa';
 import GlobalVarsProvider from './contexts/GlobalVarsProvider';

@@ -2,7 +2,7 @@ import React from 'react'
 
 function MenuAlbuns() {
   return (
-    <div>MenuAlbuns</div>
+    <section className='menuAlbuns'>MenuAlbuns</section>
   )
 }
 

@@ -5,7 +5,7 @@ import MenuAlbuns from './MenuAlbuns';
 
 function MainMenu() {
   const { classCss, optionsMenu: { opAlbum } } = useContext(GlobalVarsContext);
-  const { setOptionsMenu } = useContext(GlobalVarsContext);
+  const { setOptionsMenu, setClassCss } = useContext(GlobalVarsContext);
 
   function newSubMenu() {
     setOptionsMenu({ opAlbum: false });
@@ -15,6 +15,7 @@ function MainMenu() {
     console.log(target.id);
     newSubMenu();
     setOptionsMenu((prev) => ({ ...prev, [target.id]: true}));
+    setClassCss((prev) => ({...prev, mainCape: 'noBody animateSec menuAlbunsTrue'}));
   }
 
   return (
