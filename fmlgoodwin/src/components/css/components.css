@@ -24,7 +24,7 @@
   /* border: 3px double gold; */
   border: 20px solid transparent;
   border-image: url('../../images/borda2.png') 30 round;
-  width: 96vw;
+  width: 97vw;
   height: 63vh;
   overflow-y: auto;
 }
