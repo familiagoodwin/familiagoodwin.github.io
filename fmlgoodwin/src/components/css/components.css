@@ -13,10 +13,14 @@
 
 .menuAlbuns {
   animation: animateOpenMenuAlbuns 0.5s linear;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
   margin: 20px;
   border: 3px double gold;
   width: 90vw;
   height: 50vh;
+  overflow-y: auto;
 }
 
 @keyframes animateOpenMenuAlbuns {
@@ -28,6 +32,18 @@
   }
 }
 
-/* .cardAlbum {
+.cardAlbum {
+  background-image: url('../../images/xl-einsteckalbum-classico-300-fotos-13x19-cm-blau.png') ;
+  background-repeat: no-repeat;
+  background-size: 85px 150px;
+  /* border: 5px solid blue; */
+  margin: 5px ;
+  width: 85px;
+  height: 150px;
+}
 
-} */
+.titleCardAlbum {
+  margin-top: 10px;
+  margin-left: 7px;
+  opacity : 0.8;
+}
