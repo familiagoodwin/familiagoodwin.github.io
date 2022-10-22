@@ -1,20 +1,13 @@
-import React from 'react'
-import { useContext } from 'react'
-import GlobalVarsContext from '../contexts/context/GlobalVars'
+import React, { useContext } from 'react';
+import GlobalVarsContext from '../contexts/context/GlobalVars';
 import MenuAlbuns from './MenuAlbuns';
 
 function MainMenu() {
   const { classCss, optionsMenu: { opAlbum } } = useContext(GlobalVarsContext);
   const { setOptionsMenu, setClassCss } = useContext(GlobalVarsContext);
 
-  function newSubMenu() {
-    setOptionsMenu({ opAlbum: false });
-    setClassCss((prev) => ({...prev, mainCape: 'noBody animateSec'}));
-  }
-
   function handleClick({ id }) {
-    console.log(id);
-    newSubMenu();
+    // console.log(id);
     setOptionsMenu((prev) => ({ ...prev, [id]: true}));
     setClassCss((prev) => ({...prev, mainCape: `noBody ${id}`}));
   }

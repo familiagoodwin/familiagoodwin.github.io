@@ -1,17 +1,16 @@
-import React from 'react'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import GlobalVarsContext from '../contexts/context/GlobalVars'
+import NewMenu from '../services/NewMenu';
 
 function Capa() {
-  const { setClassCss, setOptionsMenu } = useContext(GlobalVarsContext);
+  const { setOptionsMenu, optionsMenu: { newMenu } } = useContext(GlobalVarsContext);
 
-  // console.log(classCss);
+  // console.log(newMenu);
 
   function handleClickTitle() {
     const animated = document.querySelector('.bodyCape');
 
-    setClassCss((prev) => ({...prev, mainCape: 'noBody animateSec'}));
-    setOptionsMenu({ opAlbum: false });
+    setOptionsMenu((prev) => ({ ...prev, newMenu: true }));
     animated.classList.remove('fullBody');
     animated.classList.add('animationUP');
   }
@@ -24,6 +23,7 @@ function Capa() {
     >
       <h1 className='mainTitle'>Houses and Cars</h1>
       <h3 className='mainSubTitle'>Familia Goodwin</h3>
+      {newMenu && <NewMenu />}
     </main>
   )
 }
