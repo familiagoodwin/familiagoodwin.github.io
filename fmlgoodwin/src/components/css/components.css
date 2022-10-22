@@ -17,7 +17,9 @@
   display: flex;
   flex-wrap: wrap;
   /* margin: 20px; */
-  border: 3px double gold;
+  /* border: 3px double gold; */
+  border: 30px solid transparent;
+  border-image: url('../../images/borda.png') 70 round;
   width: 95vw;
   height: 50vh;
   overflow-y: auto;

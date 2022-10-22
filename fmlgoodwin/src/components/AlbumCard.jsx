@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import GlobalVarsContext from '../contexts/context/GlobalVars';
 
-function AlbumCard() {
+function AlbumCard({ numAlbum }) {
   const { setClassCss } = useContext(GlobalVarsContext);
 
   function handleClick() {
@@ -10,7 +10,14 @@ function AlbumCard() {
 
   return (
     <div className='cardAlbum' onClick={ handleClick }>
-      <h1 className='titleCardAlbum'>Album 0001</h1>
+      <h1 className='titleCardAlbum'>
+        Album 
+        { (numAlbum < 10) ? ' 000' : ' 00' }
+        { numAlbum }
+        <br />
+        <br />
+        1900
+      </h1>
     </div>
   )
 }
