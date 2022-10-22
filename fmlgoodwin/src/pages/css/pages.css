@@ -4,7 +4,7 @@
   align-items: center;
   justify-items: center;
   justify-content: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   cursor: pointer;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .animationUP {
-  animation: animateMain 1s linear;
+  animation: animateMain 0.7s linear;
   height: 20vh;
   cursor: default;
 }

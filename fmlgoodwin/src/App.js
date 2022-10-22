@@ -1,3 +1,4 @@
+import 'bulma/css/bulma.min.css'
 import './App.css';
 import './pages/css/pages.css'
 import Capa from './pages/Capa';

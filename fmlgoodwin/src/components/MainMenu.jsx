@@ -9,8 +9,8 @@ function MainMenu() {
     <nav className={ classCss.mainCape }>
       <ul>
         <li>Albuns</li>
-        <li>teste 01</li>
-        <li>teste 02</li>
+        <li>Time Line</li>
+        <li>Extras</li>
       </ul>
     </nav>
   )
