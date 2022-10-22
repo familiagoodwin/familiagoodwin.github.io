@@ -4,10 +4,13 @@ import GlobalVarsContext from './context/GlobalVars'
 
 function GlobalVarsProvider({children}) {
   const [classCss, setClassCss] =useState({mainCape: 'noBody'});
+  const [optionsMenu, setOptionsMenu] = useState({ opAlbum: false })
 
   const objProvider = {
     classCss,
-    setClassCss
+    optionsMenu,
+    setClassCss,
+    setOptionsMenu
   }
 
   return (

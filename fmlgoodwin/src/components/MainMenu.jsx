@@ -1,12 +1,20 @@
 import React from 'react'
 import { useContext } from 'react'
 import GlobalVarsContext from '../contexts/context/GlobalVars'
+import MenuAlbuns from './MenuAlbuns';
 
 function MainMenu() {
-  const { classCss } = useContext(GlobalVarsContext);
+  const { classCss, optionsMenu: { opAlbum } } = useContext(GlobalVarsContext);
+  const { setOptionsMenu } = useContext(GlobalVarsContext);
+
+  function newSubMenu() {
+    setOptionsMenu({ opAlbum: false });
+  }
 
   function handleClick({ target }) {
     console.log(target.id);
+    newSubMenu();
+    setOptionsMenu((prev) => ({ ...prev, [target.id]: true}));
   }
 
   return (
@@ -19,6 +27,7 @@ function MainMenu() {
         <li>Time Line</li>
         <li>Extras</li>
       </ul>
+      { opAlbum && <MenuAlbuns /> }
     </nav>
   )
 }
