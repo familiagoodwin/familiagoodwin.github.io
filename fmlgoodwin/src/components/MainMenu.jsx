@@ -9,13 +9,14 @@ function MainMenu() {
 
   function newSubMenu() {
     setOptionsMenu({ opAlbum: false });
+    setClassCss((prev) => ({...prev, mainCape: 'noBody animateSec'}));
   }
 
   function handleClick({ target }) {
     console.log(target.id);
     newSubMenu();
     setOptionsMenu((prev) => ({ ...prev, [target.id]: true}));
-    setClassCss((prev) => ({...prev, mainCape: 'noBody animateSec menuAlbunsTrue'}));
+    setClassCss((prev) => ({...prev, mainCape: `noBody animateSec ${target.id}`}));
   }
 
   return (
