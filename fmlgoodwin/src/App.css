@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Retro20';
+  src: url('/src/fonts/PinballWhizNf-BqMl.ttf');
+}
+
+@font-face {
+  font-family: 'Colege';
+  src: url('/src/fonts/CollegiateheavyoutlineMedium-B0yx.ttf');
+}
+
+@font-face {
+  font-family: 'Curviline';
+  src: url('/src/fonts/Playball-q6o1.ttf');
+}
+
 .App {
   background-color: black;
   color: gold;

@@ -21,8 +21,8 @@ function Capa() {
       role='presentation'
       onClick={ hanldeClinkTitle }
     >
-      <h1>Houses and Cars</h1>
-      <h3>Familia Goodwin</h3>
+      <h1 className='mainTitle'>Houses and Cars</h1>
+      <h3 className='mainSubTitle'>Familia Goodwin</h3>
     </main>
   )
 }
