@@ -59,6 +59,22 @@
   opacity : 0.8;
 }
 
+/* icones */
+
+.iconeNav {
+  position: absolute;
+  margin: 20px;
+  top: 112vh;
+}
+
+.fa-circle-left {
+  left: 0;
+}
+
+.fa-circle-right {
+  right: 0;
+}
+
 /* album.css */
 
 .corpoAbum {

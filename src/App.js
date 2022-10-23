@@ -1,4 +1,5 @@
-import 'bulma/css/bulma.min.css'
+import 'bulma/css/bulma-rtl.min.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 import './App.css';
 import './components/css/components.css'
 import './pages/css/pages.css'
