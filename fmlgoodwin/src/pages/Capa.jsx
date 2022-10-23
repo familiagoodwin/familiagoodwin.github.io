@@ -16,7 +16,7 @@ function Capa() {
   }
 
   return (
-    <main
+    <header
       className={'bodyCape fullBody'}
       role='presentation'
       onClick={ handleClickTitle }
@@ -24,7 +24,7 @@ function Capa() {
       <h1 className='mainTitle'>Houses and Cars</h1>
       <h3 className='mainSubTitle'>Familia Goodwin</h3>
       {newMenu && <NewMenu />}
-    </main>
+    </header>
   )
 }
 
