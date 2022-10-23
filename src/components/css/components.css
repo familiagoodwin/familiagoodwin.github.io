@@ -63,8 +63,10 @@
 
 .iconeNav {
   position: absolute;
+  z-index: 3;
   margin: 20px;
   top: 112vh;
+  cursor: pointer;
 }
 
 .fa-circle-left {
@@ -85,4 +87,18 @@
 .page {
   border: 1px solid black;
   background-color: white;
+  position: absolute;
+}
+
+.num1 {
+  z-index: 1;
+}
+
+.num2 {
+  z-index: 0;
+}
+
+.imgFoto {
+  height: 150.5vh;
+  width: 98vw;
 }
