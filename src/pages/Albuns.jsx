@@ -19,7 +19,7 @@ function Albuns() {
         marginLeft={ `${locBookX}px` }
         marginTop={ `${locBookY - 170}px` }
       />
-      <Album />
+      <Album index={ arryPath[2] } />
     </div>
   )
 }

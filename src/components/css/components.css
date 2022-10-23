@@ -64,4 +64,9 @@
 .corpoAbum {
   border: 3px double gold;
   /* position: absolute; */
-} 
+}
+
+.page {
+  border: 1px solid black;
+  background-color: white;
+}
