@@ -1,0 +1,58 @@
+.noBody {
+  display: none;
+  height: 50vh;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.opAlbum {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+
+.menuAlbuns {
+  animation: animateOpenMenuAlbuns 0.5s linear;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 20px; */
+  /* border: 3px double gold; */
+  border: 20px solid transparent;
+  border-image: url('../../images/borda2.png') 30 round;
+  width: 97vw;
+  height: 63vh;
+  overflow-y: auto;
+}
+
+@keyframes animateOpenMenuAlbuns {
+  0% {
+      height: 18vh;
+  }
+  100% {
+      height: 63vh;
+  }
+}
+
+.cardAlbum {
+  background-image: url('../../images/xl-einsteckalbum-classico-300-fotos-13x19-cm-blau.png') ;
+  background-repeat: no-repeat;
+  background-size: 85px 150px;
+  /* border: 5px solid blue; */
+  margin: 10px 5px 0px ;
+  width: 85px;
+  height: 150px;
+  cursor: pointer;
+  font-family: 'Wester';
+  font-weight: lighter;
+}
+
+.titleCardAlbum {
+  margin-top: 10px;
+  margin-left: 7px;
+  opacity : 0.8;
+}

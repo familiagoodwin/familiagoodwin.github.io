@@ -1,12 +1,19 @@
-import logo from './logo.svg';
+import 'bulma/css/bulma.min.css'
 import './App.css';
+import './components/css/components.css'
+import './pages/css/pages.css'
 import Capa from './pages/Capa';
+import GlobalVarsProvider from './contexts/GlobalVarsProvider';
+import Principal from './pages/Principal';
 
 function App() {
   return (
-    <div className="App">
-     <Capa />
-    </div>
+    <GlobalVarsProvider>
+      <div className="App">
+        <Capa />
+        <Principal />
+      </div>
+    </GlobalVarsProvider>
   );
 }
 
