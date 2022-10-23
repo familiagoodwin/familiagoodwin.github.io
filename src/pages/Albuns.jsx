@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { useLocation } from 'react-router-dom';
+import Album from '../components/Album';
 import AlbumCard from '../components/AlbumCard'
 import GlobalVarsContext from '../contexts/context/GlobalVars';
 
@@ -18,6 +19,7 @@ function Albuns() {
         marginLeft={ `${locBookX}px` }
         marginTop={ `${locBookY - 170}px` }
       />
+      <Album />
     </div>
   )
 }
