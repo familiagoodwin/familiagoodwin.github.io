@@ -8,7 +8,11 @@ function Albuns() {
 
   return (
     <div>
-      <AlbumCard numAlbum={ arryPath[2].replaceAll('0','') } />
+      <AlbumCard
+        numAlbum={ arryPath[2].replaceAll('0','') } 
+        classeMain='cardAlbum animateOpenAlbum' 
+        classTitle='titleCardAlbum animateOpenAlbum'
+      />
     </div>
   )
 }

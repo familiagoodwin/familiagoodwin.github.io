@@ -44,3 +44,22 @@
   font-family: 'Curviline';
   font-size: 2vw;
 }
+
+/* albuns.css */
+
+.animateOpenAlbum {
+  animation: animateOpenAlbum 0.7s linear;
+  overflow: hidden;
+  width: 0px;
+}
+
+@keyframes animateOpenAlbum {
+  0% {
+    width: 85px;
+  }
+  100% {
+    width: 0px;
+    margin-left: 40px;
+    transform: rotateY(3.142rad);
+  }
+}

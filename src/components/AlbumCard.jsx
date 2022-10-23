@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import GlobalVarsContext from '../contexts/context/GlobalVars';
 
-function AlbumCard({ numAlbum }) {
+function AlbumCard({ numAlbum, classeMain, classTitle }) {
   const { setClassCss } = useContext(GlobalVarsContext);
   const urlAlbum = (numAlbum < 10) ? `000${numAlbum}` : `00${numAlbum}`;
   const push = useNavigate();
@@ -13,8 +13,8 @@ function AlbumCard({ numAlbum }) {
   }
 
   return (
-    <div className='cardAlbum' onClick={ handleClick }>
-      <h1 className='titleCardAlbum'>
+    <div className={ classeMain } onClick={ handleClick }>
+      <h1 className={ classTitle }>
         Album 
         {' '}
         { urlAlbum }
