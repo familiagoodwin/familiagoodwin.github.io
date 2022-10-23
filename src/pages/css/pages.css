@@ -1,3 +1,8 @@
+main {
+  background-color: black;
+  overflow: hidden;
+}
+
 .bodyCape {
   display: flex;
   flex-direction: column;
@@ -49,6 +54,8 @@
 
 .corpoAbum {
   animation: animateOpenAlbum2 2s forwards;
+  background-color: gray;
+  margin: 10px;
 }
 
 .animateOpenAlbum {
