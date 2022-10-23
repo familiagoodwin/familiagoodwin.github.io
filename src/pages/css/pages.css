@@ -51,15 +51,18 @@
   animation: animateOpenAlbum 0.7s linear;
   overflow: hidden;
   width: 0px;
+  /* display: none; */
 }
 
 @keyframes animateOpenAlbum {
   0% {
-    width: 85px;
+    width: 80px;
+    /* margin-left: 50px; */
+    /* margin-top: 120px; */
   }
   100% {
     width: 0px;
-    margin-left: 40px;
-    transform: rotateY(3.142rad);
+    /* margin-left: 40px; */
+    transform: rotateY(3rad);
   }
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GlobalVarsContext from './context/GlobalVars';
 
 function GlobalVarsProvider({children}) {
-  const [classCss, setClassCss] =useState({mainCape: 'noBody'});
+  const [classCss, setClassCss] =useState({mainCape: 'noBody', locBookX: 0, locBookY: 0});
   const [optionsMenu, setOptionsMenu] = useState({ opAlbum: false, newMenu: false })
 
   const objProvider = {
