@@ -3,7 +3,8 @@ import React from 'react'
 function Album() {
   return (
     <section className='corpoAbum'>
-      teste
+      <div className='page'></div>
+      <div className='page'></div>
     </section>
   )
 }
