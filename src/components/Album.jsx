@@ -5,11 +5,8 @@ function Album({ index }) {
   const [ pagina, setPagina ] = useState(0);
   const [ nav , setNav ] = useState(0);
   const [ end, setEnd ] = useState(false);
-  // const [ flip, setFlip ] = useState({ num1: true, num2: false });
   const album = guia[index - 1];
 
-  // console.log(flip);
-  // console.log(pagina);
 
   useEffect(()=> {
     const btnNext = document.querySelector('.fa-circle-right');
@@ -22,6 +19,10 @@ function Album({ index }) {
       btnPrev.addEventListener('mouseout',()=>{btnPrev.classList.remove('fa-beat-fade')});
     }
   },[]);
+
+  useEffect(()=>{
+    if (nav > album.paginas.length - 1) setNav(0);
+  },[album.paginas.length, nav]);
 
   const navNext = (actual) => {
     const pagLeft = document.querySelector('.num1');
@@ -52,25 +53,35 @@ function Album({ index }) {
     }
   }
 
+  const zeraAlbum = () => {
+    setNav(0);
+    setPagina(0);
+    setEnd(false);
+  }
+
   return (
     <section className='corpoAbum'>
       { (end) && (<p>Fim do Album</p>) }
-      <div className='page num1'>
-        <img className='imgFoto' src={album.paginas[nav].url} alt={ `Pagina ${pagina}` } />
-      </div>
-      <div className='page num2'>
-        <img className='imgFoto' src={album.paginas[pagina + 1].url} alt={ `Pagina ${pagina + 1}` } />
-      </div>
-      <i 
-        id='navPrev'
-        onClick={ navClick }
-        class="fa-regular fa-circle-left fa-4x iconeNav" 
-      />
-      <i 
-        id='navNext'
-        onClick={ navClick }
-        class="fa-regular fa-circle-right fa-4x iconeNav" 
-      />
+      { (nav > album.paginas.length - 1) ? zeraAlbum() : (
+        <div>
+          <div className='page num1'>
+            <img className='imgFoto' src={album.paginas[nav].url} alt={ `Pagina ${pagina}` } />
+          </div>
+          <div className='page num2'>
+            <img className='imgFoto' src={album.paginas[pagina + 1].url} alt={ `Pagina ${pagina + 1}` } />
+          </div>
+          <i 
+            id='navPrev'
+            onClick={ navClick }
+            class="fa-regular fa-circle-left fa-4x iconeNav" 
+          />
+          <i 
+            id='navNext'
+            onClick={ navClick }
+            class="fa-regular fa-circle-right fa-4x iconeNav" 
+          />
+        </div>
+      ) }
     </section>
   )
 }
