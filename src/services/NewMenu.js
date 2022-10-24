@@ -7,7 +7,7 @@ const NewMenu = () => {
   // console.log('oi');
 
   setClassCss((prev) => ({...prev, mainCape: 'noBody animateSec'}));
-  setOptionsMenu({ opAlbum: false, newMenu: false });
+  setOptionsMenu({ opAlbum: false, opTimeLine: false, newMenu: false });
 
   return (<div>NOVO MENU</div>);
 }
