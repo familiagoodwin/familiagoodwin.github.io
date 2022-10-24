@@ -8,7 +8,7 @@ function Albuns() {
   const { classCss: { locBookX, locBookY } } = useContext(GlobalVarsContext);
   const { pathname } = useLocation();
   const arryPath = pathname.split('/');
-  console.log(locBookY);
+  // console.log(locBookY);
 
   return (
     <div>

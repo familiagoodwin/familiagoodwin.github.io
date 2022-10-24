@@ -65,7 +65,7 @@
   position: absolute;
   z-index: 3;
   margin: 20px;
-  top: 112vh;
+  top: 90vh;
   cursor: pointer;
 }
 
@@ -82,6 +82,11 @@
 .corpoAbum {
   border: 3px double gold;
   /* position: absolute; */
+}
+
+.corpoAbum p {
+  /* position: absolute; */
+  z-index: 5;
 }
 
 .page {

@@ -4,6 +4,7 @@ import guia from '../services/guiaFotos'
 function Album({ index }) {
   const [ pagina, setPagina ] = useState(0);
   const [ nav , setNav ] = useState(0);
+  const [ end, setEnd ] = useState(false);
   // const [ flip, setFlip ] = useState({ num1: true, num2: false });
   const album = guia[index - 1];
 
@@ -26,7 +27,6 @@ function Album({ index }) {
     const pagLeft = document.querySelector('.num1');
     const pagRigth = document.querySelector('.num2');
 
-    console.log(actual - 1 % 2);
     if (actual % 2 === 0) {
       setNav((prev) => prev + 1);
       pagRigth.classList.remove('pageNext');
@@ -39,22 +39,22 @@ function Album({ index }) {
       pagRigth.classList.add('pageNext');
       pagLeft.style.zIndex = "1"; 
     }
-
-    if (actual < album.paginas.length - 1) {
-      console.log('teste');
-
-    }
   }
 
   function navClick({ target }) {
-    // console.log(album.paginas.length);
     if (target.id === 'navNext' && nav + 1 < album.paginas.length - 1) {
+      window.scrollTo(0, 70);
+      setEnd(false)
       navNext(nav);
+    } else {
+      window.scrollTo(0, 0)
+      setEnd(true);
     }
   }
 
   return (
     <section className='corpoAbum'>
+      { (end) && (<p>Fim do Album</p>) }
       <div className='page num1'>
         <img className='imgFoto' src={album.paginas[nav].url} alt={ `Pagina ${pagina}` } />
       </div>

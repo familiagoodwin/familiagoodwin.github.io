@@ -18,8 +18,7 @@ main {
 }
 
 .animationUP {
-  animation: animateMain 0.7s linear;
-  height: 30vh;
+  animation: animateMain 0.7s forwards;
   /* cursor: default; */
 }
 
@@ -35,14 +34,14 @@ main {
       height: 100vh;
   }
   100% {
-      height: 20vh;
+      height: 18vh;
   }
 }
 
 .mainTitle {
   font-family: 'Colege';
   font-size: 5vw;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .mainSubTitle {
