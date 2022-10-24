@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import GlobalVarsContext from '../contexts/context/GlobalVars';
+import guia from '../services/guiaFotos';
 
 function AlbumCard({ numAlbum, classeMain, classTitle, marginLeft, marginTop }) {
   const { setClassCss } = useContext(GlobalVarsContext);
@@ -14,7 +15,7 @@ function AlbumCard({ numAlbum, classeMain, classTitle, marginLeft, marginTop }) 
     setClassCss((prev) => ({...prev, mainCape: `noBody`, locBookX, locBookY }));;
     push(`/albuns/${urlAlbum}`);
   }
-
+  console.log(guia[numAlbum - 1].data);
   return (
     <div className={ classeMain } onClick={ handleClick } style={{ marginLeft, marginTop }}>
       <h1 className={ classTitle }>
@@ -23,7 +24,7 @@ function AlbumCard({ numAlbum, classeMain, classTitle, marginLeft, marginTop }) 
         { urlAlbum }
         <br />
         <br />
-        1900
+        { (guia[numAlbum - 1].data) ? guia[numAlbum - 1].data : '1960' }
       </h1>
     </div>
   )
