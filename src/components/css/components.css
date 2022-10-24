@@ -1,0 +1,133 @@
+.noBody {
+  display: none;
+  height: 50vh;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.opAlbum {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+
+.opTimeLine {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: 80vh; */
+}
+
+.menuAlbuns {
+  animation: animateOpenMenuAlbuns 0.5s linear;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 20px; */
+  /* border: 3px double gold; */
+  border: 20px solid transparent;
+  border-image: url('../../images/borda2.png') 30 round;
+  width: 97vw;
+  height: 63vh;
+  overflow-y: auto;
+}
+
+@keyframes animateOpenMenuAlbuns {
+  0% {
+      height: 18vh;
+  }
+  100% {
+      height: 63vh;
+  }
+}
+
+.cardAlbum {
+  background-image: url('../../images/xl-einsteckalbum-classico-300-fotos-13x19-cm-blau.png') ;
+  background-repeat: no-repeat;
+  background-size: 85px 150px;
+  /* border: 5px solid blue; */
+  /* margin-top: 10px; */
+  margin-right: 10px;
+  /* margin: 10px 5px 0px ; */
+  width: 85px;
+  height: 150px;
+  cursor: pointer;
+  font-family: 'Wester';
+  font-weight: lighter;
+}
+
+.titleCardAlbum {
+  margin-top: 10px;
+  margin-left: 7px;
+  opacity : 0.8;
+}
+
+/* icones */
+
+.iconeNav {
+  position: absolute;
+  z-index: 3;
+  margin: 20px;
+  top: 90vh;
+  cursor: pointer;
+}
+
+.fa-circle-left {
+  left: 0;
+}
+
+.fa-circle-right {
+  right: 0;
+}
+
+/* album.css */
+
+.corpoAbum {
+  border: 3px double gold;
+  /* position: absolute; */
+}
+
+.corpoAbum p {
+  /* position: absolute; */
+  z-index: 5;
+}
+
+.page {
+  border: 1px solid black;
+  background-color: white;
+  position: absolute;
+}
+
+.num1 {
+  z-index: 1;
+}
+
+.num2 {
+  z-index: 0;
+}
+
+.imgFoto {
+  height: 150.5vh;
+  width: 98vw;
+}
+
+.pageNext {
+  animation: animateNextPage 3s forwards;
+}
+
+@keyframes animateNextPage {
+  0% {
+    margin-left: 0;
+    width: 98vw;
+    z-index: 3;
+  }
+  100% {
+    width: 0vw;
+    z-index: 0;
+  }
+}
