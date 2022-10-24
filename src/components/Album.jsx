@@ -33,8 +33,8 @@ function Album({ index }) {
       pagLeft.classList.add('pageNext');
       pagRigth.style.zIndex = "1";
     } else {
-      setNav((prev) => prev + 1);
       setPagina((prev) => prev + 2);
+      setNav((prev) => prev + 1);
       pagLeft.classList.remove('pageNext');
       pagRigth.classList.add('pageNext');
       pagLeft.style.zIndex = "1"; 
@@ -56,7 +56,7 @@ function Album({ index }) {
   return (
     <section className='corpoAbum'>
       <div className='page num1'>
-        <img className='imgFoto' src={album.paginas[pagina].url} alt={ `Pagina ${pagina}` } />
+        <img className='imgFoto' src={album.paginas[nav].url} alt={ `Pagina ${pagina}` } />
       </div>
       <div className='page num2'>
         <img className='imgFoto' src={album.paginas[pagina + 1].url} alt={ `Pagina ${pagina + 1}` } />

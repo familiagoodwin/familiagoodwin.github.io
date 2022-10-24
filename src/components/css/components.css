@@ -104,7 +104,7 @@
 }
 
 .pageNext {
-  animation: animateNextPage 2s forwards;
+  animation: animateNextPage 3s forwards;
 }
 
 @keyframes animateNextPage {
