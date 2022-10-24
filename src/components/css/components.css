@@ -102,3 +102,17 @@
   height: 150.5vh;
   width: 98vw;
 }
+
+.pageNext {
+  animation: animateNextPage 1s forwards;
+}
+
+@keyframes animateNextPage {
+  0% {
+    margin-left: 0;
+    width: 98vw;
+  }
+  100% {
+    width: 0vw;
+  }
+}
