@@ -3,11 +3,12 @@ import guia from '../services/guiaFotos'
 
 function Album({ index }) {
   const [ pagina, setPagina ] = useState(0);
-  const [ flip, setFlip ] = useState({ num1: true, num2: false });
+  const [ nav , setNav ] = useState(0);
+  // const [ flip, setFlip ] = useState({ num1: true, num2: false });
   const album = guia[index - 1];
 
-  console.log(flip);
-  console.log(pagina);
+  // console.log(flip);
+  // console.log(pagina);
 
   useEffect(()=> {
     const btnNext = document.querySelector('.fa-circle-right');
@@ -26,22 +27,17 @@ function Album({ index }) {
     const pagRigth = document.querySelector('.num2');
 
     console.log(actual - 1 % 2);
-    if (actual - 1 % 2 === 0) {
-      pagLeft.style.zIndex = "1"; 
-      pagRigth.style.zIndex = "0";
-      setPagina((prev) => prev + 1);
-      setFlip((prev) => ({ ...prev, num1: false}));
+    if (actual % 2 === 0) {
+      setNav((prev) => prev + 1);
       pagRigth.classList.remove('pageNext');
       pagLeft.classList.add('pageNext');
-      setFlip((prev) => ({ ...prev, num2: true }));
-    } else {
-      pagLeft.style.zIndex = "0"; 
       pagRigth.style.zIndex = "1";
-      setPagina((prev) => prev + 1);
-      setFlip((prev) => ({ ...prev, num2: false }));
+    } else {
+      setNav((prev) => prev + 1);
+      setPagina((prev) => prev + 2);
       pagLeft.classList.remove('pageNext');
       pagRigth.classList.add('pageNext');
-      setFlip((prev) => ({ ...prev, num1: true }));
+      pagLeft.style.zIndex = "1"; 
     }
 
     if (actual < album.paginas.length - 1) {
@@ -52,37 +48,19 @@ function Album({ index }) {
 
   function navClick({ target }) {
     // console.log(album.paginas.length);
-    if (target.id === 'navNext' && pagina + 1 < album.paginas.length - 1) {
-      navNext(pagina + 1);
+    if (target.id === 'navNext' && nav + 1 < album.paginas.length - 1) {
+      navNext(nav);
     }
   }
 
   return (
     <section className='corpoAbum'>
-      {/* <div className='page num1'>
+      <div className='page num1'>
         <img className='imgFoto' src={album.paginas[pagina].url} alt={ `Pagina ${pagina}` } />
-      </div> */}
-      { (flip.num1) ? (
-          <div className='page num1'>
-            <img className='imgFoto' src={album.paginas[pagina].url} alt={ `PaginaA ${pagina}` } />
-          </div>
-        ) : (
-          <div className='page num1'>
-            <img className='imgFoto' src={album.paginas[pagina + 1].url} alt={ `PaginaA ${pagina + 1}` } />
-          </div>
-        )
-      }
-      { (flip.num2) ? (
-          <div className='page num2'>
-            <img className='imgFoto' src={album.paginas[pagina].url} alt={ `PaginaB ${pagina}` } />
-          </div>
-        ) : (
-          <div className='page num2'>
-            <img className='imgFoto' src={album.paginas[pagina + 1].url} alt={ `PaginaB ${pagina + 1}` } />
-          </div>
-        )
-      }
-      
+      </div>
+      <div className='page num2'>
+        <img className='imgFoto' src={album.paginas[pagina + 1].url} alt={ `Pagina ${pagina + 1}` } />
+      </div>
       <i 
         id='navPrev'
         onClick={ navClick }

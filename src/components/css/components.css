@@ -104,15 +104,17 @@
 }
 
 .pageNext {
-  animation: animateNextPage 1s forwards;
+  animation: animateNextPage 2s forwards;
 }
 
 @keyframes animateNextPage {
   0% {
     margin-left: 0;
     width: 98vw;
+    z-index: 3;
   }
   100% {
     width: 0vw;
+    z-index: 0;
   }
 }
