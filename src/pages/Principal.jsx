@@ -10,7 +10,7 @@ function Principal() {
         <MainMenu />
         <Routes>
           {/* <Route exact path="/" component={ <Albuns /> } /> */}
-          <Route exact path="/albuns" element={ <Albuns /> } />
+          {/* <Route exact path="/albuns" element={ <Albuns /> } /> */}
           <Route exact path="/albuns/:id" element={ <Albuns /> } />
         </Routes>
       </BrowserRouter>

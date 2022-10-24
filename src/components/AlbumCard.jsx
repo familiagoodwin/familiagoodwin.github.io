@@ -4,7 +4,7 @@ import GlobalVarsContext from '../contexts/context/GlobalVars';
 import guia from '../services/guiaFotos';
 
 function AlbumCard({ numAlbum, classeMain, classTitle, marginLeft, marginTop }) {
-  const { setClassCss } = useContext(GlobalVarsContext);
+  const { setClassCss, setNavItens } = useContext(GlobalVarsContext);
   const urlAlbum = (numAlbum < 10) ? `000${numAlbum}` : `00${numAlbum}`;
   const push = useNavigate();
 
@@ -12,7 +12,9 @@ function AlbumCard({ numAlbum, classeMain, classTitle, marginLeft, marginTop }) 
     const locBookX = target.getBoundingClientRect().x;
     const locBookY = target.getBoundingClientRect().y;
 
-    setClassCss((prev) => ({...prev, mainCape: `noBody`, locBookX, locBookY }));;
+    setClassCss((prev) => ({...prev, mainCape: `noBody`, locBookX, locBookY }));
+    setNavItens({ pagina: 0, nav: 0, end: false });
+  
     push(`/albuns/${urlAlbum}`);
   }
 
