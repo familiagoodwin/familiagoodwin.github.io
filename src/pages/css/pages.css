@@ -60,6 +60,7 @@ main {
 
 .animateOpenAlbum {
   position: absolute;
+  z-index: 3;
   animation: animateOpenAlbum 0.7s linear;
   animation-fill-mode: forwards;
   overflow: hidden;
