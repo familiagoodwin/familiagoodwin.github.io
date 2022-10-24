@@ -15,7 +15,7 @@ function AlbumCard({ numAlbum, classeMain, classTitle, marginLeft, marginTop }) 
     setClassCss((prev) => ({...prev, mainCape: `noBody`, locBookX, locBookY }));;
     push(`/albuns/${urlAlbum}`);
   }
-  console.log(guia[numAlbum - 1].data);
+
   return (
     <div className={ classeMain } onClick={ handleClick } style={{ marginLeft, marginTop }}>
       <h1 className={ classTitle }>
